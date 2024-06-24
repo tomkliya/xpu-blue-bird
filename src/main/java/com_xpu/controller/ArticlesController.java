@@ -2,7 +2,7 @@ package com_xpu.controller;
 
 
 import com_xpu.domain.entity.Result;
-import com_xpu.domain.vo.ArticlesVO;
+import com_xpu.domain.dto.ArticlesDTO;
 import com_xpu.service.impl.ArticlesServiceImpl;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -29,9 +29,9 @@ private ArticlesServiceImpl articlesService;
 
     @PostMapping("/add")
     @ApiOperation("添加文章")
-    public Result addArticle(@RequestBody ArticlesVO articlesVO){
-        log.info("添加文章:{}",articlesVO.toString());
-        Boolean b = articlesService.addArticle(articlesVO);
+    public Result addArticle(@RequestBody ArticlesDTO articlesDTO){
+        log.info("添加文章:{}", articlesDTO.toString());
+        Boolean b = articlesService.addArticle(articlesDTO);
         return Result.success(b);
     }
 

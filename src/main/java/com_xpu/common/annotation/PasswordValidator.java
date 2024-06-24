@@ -1,12 +1,12 @@
 package com_xpu.common.annotation;
 
-import com_xpu.domain.vo.UserVO;
+import com_xpu.domain.dto.UserDTO;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.util.Objects;
 
-public class PasswordValidator implements ConstraintValidator<PasswordEqual, UserVO> {
+public class PasswordValidator implements ConstraintValidator<PasswordEqual, UserDTO> {
 
     @Override
     public void initialize(PasswordEqual constraintAnnotation) {
@@ -15,10 +15,10 @@ public class PasswordValidator implements ConstraintValidator<PasswordEqual, Use
 
 
     @Override
-    public boolean isValid(UserVO userVO, ConstraintValidatorContext constraintValidatorContext) {
-        if (Objects.isNull(userVO)) {
+    public boolean isValid(UserDTO userDTO, ConstraintValidatorContext constraintValidatorContext) {
+        if (Objects.isNull(userDTO)) {
             return true;
         }
-        return Objects.equals(userVO.getPassword(), userVO.getAgainPassword());
+        return userDTO.getPassword().equals(userDTO.getAgainPassword());
     }
 }

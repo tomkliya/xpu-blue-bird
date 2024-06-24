@@ -2,7 +2,7 @@ package com_xpu.service.impl;
 
 import com_xpu.dao.ArticlesDao;
 import com_xpu.domain.entity.Articles;
-import com_xpu.domain.vo.ArticlesVO;
+import com_xpu.domain.dto.ArticlesDTO;
 import com_xpu.mapper.ArticlesMapper;
 import com_xpu.service.IArticlesService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -28,9 +28,9 @@ public class ArticlesServiceImpl extends ServiceImpl<ArticlesMapper, Articles> i
     private ArticlesDao articlesDao;
 
     @Override
-    public Boolean addArticle(ArticlesVO articlesVO) {
+    public Boolean addArticle(ArticlesDTO articlesDTO) {
 
-        Articles articles = articleAdapter.NewArticles(articlesVO);
+        Articles articles = articleAdapter.NewArticles(articlesDTO);
         return articlesDao.save(articles);
 
     }

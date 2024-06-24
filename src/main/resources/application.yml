@@ -32,3 +32,5 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.knife4j.demo.new3
+blue-bird:
+ secret: jaguarliuwqwerty

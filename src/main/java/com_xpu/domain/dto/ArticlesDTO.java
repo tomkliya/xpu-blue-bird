@@ -1,9 +1,9 @@
-package com_xpu.domain.vo;
+package com_xpu.domain.dto;
 
 import lombok.Data;
 
 @Data
-public class ArticlesVO {
+public class ArticlesDTO {
     /**
      * 文章标题
      */

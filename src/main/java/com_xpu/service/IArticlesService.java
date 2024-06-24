@@ -2,7 +2,7 @@ package com_xpu.service;
 
 import com_xpu.domain.entity.Articles;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com_xpu.domain.vo.ArticlesVO;
+import com_xpu.domain.dto.ArticlesDTO;
 
 /**
  * <p>
@@ -14,6 +14,6 @@ import com_xpu.domain.vo.ArticlesVO;
  */
 public interface IArticlesService extends IService<Articles> {
 
-    Boolean addArticle(ArticlesVO articlesVO);
+    Boolean addArticle(ArticlesDTO articlesDTO);
 
 }

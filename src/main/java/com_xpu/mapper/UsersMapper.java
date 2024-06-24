@@ -12,5 +12,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2024-06-21
  */
 public interface UsersMapper extends BaseMapper<Users> {
+    Users selectByPhone(String phone);
 
+    Users selectByUserName(String userName);
+
+    Users selectByUserNameOrPhone(String userNameOrPhone);
 }

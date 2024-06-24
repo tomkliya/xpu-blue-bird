@@ -13,4 +13,6 @@ public class UsersStatus {
     public static final Integer CREATED = 0; //初始化
 
     public static final Integer BNAD = 3;//禁用
+
+    public static final Integer DELETED = 4;//删除
 }
